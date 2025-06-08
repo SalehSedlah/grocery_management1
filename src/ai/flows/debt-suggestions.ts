@@ -1,5 +1,5 @@
 // debt-suggestions.ts
-'use server';
+// 'use server';
 
 /**
  * @fileOverview AI assistant for debt management, providing credit limit suggestions based on debtor data.
