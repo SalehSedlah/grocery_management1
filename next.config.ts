@@ -1,7 +1,11 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  //  output: 'export',
+   output: 'export',
+   i18n: {
+    locales: ['en', 'ar'],
+    defaultLocale: 'en',
+   },
   /* config options here */
   // typescript: {
   //   ignoreBuildErrors: true, // Removed to enforce type checking
