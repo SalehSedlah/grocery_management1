@@ -1,4 +1,4 @@
-'use server';
+// 'use server';
 
 /**
  * AI chat assistant for product management insights.
