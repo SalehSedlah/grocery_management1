@@ -1,0 +1,26 @@
+
+import { NextRequest, NextResponse } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  const response = NextResponse.next();
+
+  // Add security headers
+  response.headers.set('x-content-type-options', 'nosniff');
+  response.headers.set('x-dns-prefetch-control', 'off');
+  response.headers.set('x-download-options', 'noopen');
+  response.headers.set('x-frame-options', 'SAMEORIGIN');
+  response.headers.set('x-xss-protection', '1; mode=block');
+  
+  return response;
+}
+
+export const config = {
+  matcher: [
+    // Match all request paths except for the ones starting with:
+    // - api (API routes)
+    // - _next/static (static files)
+    // - _next/image (image optimization files)
+    // - favicon.ico (favicon file)
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
