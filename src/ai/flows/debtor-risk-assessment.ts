@@ -1,6 +1,6 @@
 
 // src/ai/flows/debtor-risk-assessment.ts
-'use server';
+// 'use server';
 
 /**
  * @fileOverview Assesses the risk associated with a debtor based on their payment behavior, credit score, and debt amount.
